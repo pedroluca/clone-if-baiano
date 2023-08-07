@@ -1,0 +1,177 @@
+:root {
+  --mobile-nav-height: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-mobile {
+    display: flex;
+    background: rgb(0,81,14);
+    height: var(--mobile-nav-height);
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    align-items: center;
+  }
+
+  .menu-mobile img {
+    height: 3rem;
+  }
+  
+  main.corpo-pagina {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  main.corpo-pagina > h1 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .img-curso {
+    width: 100%;
+  }
+
+  section.corpo-conteudo {
+    flex-direction: column;
+  }
+
+  main.conteudo {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .carousel {
+    font-size: 14px;
+  }
+
+  .caption h1 {
+    font-size: 1rem;
+    padding: 0 1rem 0 0;
+    bottom: 3rem;
+  }
+
+  .slide {
+    height: 230px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    padding: 1rem;
+  }
+
+  .prev-btn img,
+  .next-btn img {
+    height: 1.3rem;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  div.quadro {
+    width: 100%;
+  }
+
+  div.quadro nav p {
+    display: none;
+  }
+
+  aside.anuncios {
+    width: 100%;
+  }
+
+  aside.anuncios section {
+    width: 100%;
+  }
+
+  .info-button {
+    height: 60px;
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .logo-rede {
+    width: 20%;
+  }
+
+  aside.noticias > img {
+    width: 90%;
+  }
+
+  footer.rodape {
+    height: auto;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .menu > img {
+    display: none;
+  }
+
+  /* MENU MOBILE */
+  .mobile-btn {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding: .5rem 0;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+  
+  .hamburguer {
+    display: block;
+    width: 25px;
+    border-top: 2px solid #e1e1e1;
+    z-index: 9999;
+  }
+  
+  .hamburguer::after, .hamburguer::before {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #e1e1e1;
+    margin-top: 7px;
+    transition: .3s;
+    position: relative;
+  }
+  
+  aside.menu {
+    visibility: hidden;
+    height: calc(100vh - var(--mobile-nav-height));
+    position: fixed;
+    top: var(--mobile-nav-height);
+    width: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    transition: .9s;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  
+  .menu.active {
+    width: 70%;
+    visibility: visible;
+  }
+  
+  .menu.active .hamburguer {
+    border-top-color: transparent;
+  }
+  
+  .menu.active .hamburguer::before {
+    transform: rotate(135deg);
+  }
+  
+  .menu.active .hamburguer::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
