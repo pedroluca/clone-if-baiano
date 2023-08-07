@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/css-mobile.css">
     <title>Curso de Agronomia</title>
   </head>
   <body>
-    <aside class="menu">
+    <aside class="menu" id="menu">
       <img src="../images/icone-IF-branca.svg" onclick="window.location.href = '/'">
       <div>
         <img src="../images/search-2.png">
@@ -24,6 +25,11 @@
       </nav>
     </aside>
     <main class="corpo-pagina">
+      <nav class="menu-mobile">
+        <button id="mobile-btn" class="mobile-btn"><span id="hamburguer" class="hamburguer"></span></button>
+        <img src="../images/IF.svg" onclick="window.location.href = '/'">
+        <button class="mobile-btn invisible"><span class="hamburguer"></span></button>
+      </nav>
       <h1 class="big-font">Agronomia</h1>
       <section class="corpo-conteudo">
         <main class="conteudo">
@@ -142,5 +148,6 @@
       </p>
     </footer>
     <script src="../js/menuCursos.js"></script>
+    <script src="../js/menuMobile.js"></script>
   </body>
 </html>

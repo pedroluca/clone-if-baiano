@@ -2,6 +2,10 @@
   --aside-width: 15%;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -22,18 +26,26 @@ main.corpo-pagina {
   display: flex;
 }
 
+.menu-mobile {
+  display: none;
+}
+
 aside.menu {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
   width: var(--aside-width);
-  background: rgb(0,81,14);
   padding: 1rem;
+  background: rgb(0,81,14);
   background: linear-gradient(0deg, rgba(0,81,14,1) 0%, rgba(24,134,43,1) 35%, rgba(0,78,13,1) 100%);
 }
 
 aside.menu > img {
   height: 180px;
+}
+
+aside.menu >img:hover {
+  cursor: pointer;
 }
 
 aside.menu > div {
@@ -59,7 +71,9 @@ aside.menu > div input {
   border: none;
   outline: none;
   font-size: 1.2rem;
+  color: #e1e1e1;
   width: 80%;
+  caret-color: #e1e1e1;
 }
 
 aside.menu > div input::placeholder {
@@ -446,7 +460,6 @@ footer .email:hover {
   margin: 0 1rem;
   border: none;
   border-radius: 50%;
-  font-size: 24px;
   color: #fff;
   display: flex;
   align-items: center;
@@ -468,7 +481,7 @@ footer .email:hover {
   margin-top: 10px;
   position: absolute;
   bottom: 10px;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
 }
 
